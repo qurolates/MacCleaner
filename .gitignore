@@ -1,6 +1,10 @@
 .DS_Store
 .claude/
+prompt.md 
+AGENTS.md 
+IDEAS.md 
 MacCleaner.app/
+MacCleaner.zip
 MacCleaner.icns
 mac-cleaner-core/target/
 *.md
