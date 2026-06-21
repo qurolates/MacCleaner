@@ -57,6 +57,8 @@ A lightweight, open-source macOS cleaning utility built with **Rust** and **Swif
 open MacCleaner.app
 ```
 
+### **There's also prebilded app in releases**
+
 ### Test Rust Core Directly
 
 ```bash
