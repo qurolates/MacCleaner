@@ -17,6 +17,7 @@ ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 RUST_DIR="$ROOT/mac-cleaner-core"
 SWIFT_SRC="$ROOT/swift-ui/main.swift"
 PLIST_SRC="$ROOT/build-assets/Info.plist"
+ICON_SRC="$ROOT/MacCleaner.icns"
 
 APP_NAME="MacCleaner"
 APP_BUNDLE="$ROOT/$APP_NAME.app"
@@ -86,6 +87,14 @@ ok "Swift binary built: $MACOS_DIR/$APP_NAME"
 # ─────────────────────────────────────────────────────────────
 cp "$PLIST_SRC" "$CONTENTS/Info.plist"
 ok "Info.plist installed"
+
+# ─────────────────────────────────────────────────────────────
+# 5b. Copy app icon
+# ─────────────────────────────────────────────────────────────
+if [ -f "$ICON_SRC" ]; then
+    cp "$ICON_SRC" "$CONTENTS/Resources/MacCleaner.icns"
+    ok "App icon installed"
+fi
 
 # ─────────────────────────────────────────────────────────────
 # 6. Ad-hoc codesign so Gatekeeper lets us launch it locally
