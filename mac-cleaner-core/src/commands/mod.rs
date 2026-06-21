@@ -1,0 +1,11 @@
+pub mod browser_caches;
+pub mod delete_paths;
+pub mod docker;
+pub mod junk;
+pub mod large_files;
+pub mod login_items;
+pub mod node_modules;
+pub mod old_installers;
+pub mod sweep;
+pub mod uninstall;
+pub mod xcode;
